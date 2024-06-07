@@ -18,7 +18,7 @@ export default function App() {
 		domtoimage
 			.toPng(node)
 			.then(function (dataUrl) {
-				window.open(dataUrl, "_blank");
+				window.location.href = dataUrl;
 			})
 			.catch(function (error) {
 				console.error("oops, something went wrong!", error);
@@ -61,7 +61,7 @@ export default function App() {
 						transform: `translate(${x}rem, ${y}rem) scale(${scale})`,
 						transformOrigin: "center",
 					}} // Apply scaling and transform-origin
-					className="absolute inset-0 object-cover object-center w-full h-full z-10 overflow-hidden"
+					className="absolute inset-0 object-cover object-center w-[1080px] aspect-square z-10 overflow-hidden"
 					src="./img.jpg"
 					alt=""
 				/>

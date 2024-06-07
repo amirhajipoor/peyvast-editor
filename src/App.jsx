@@ -58,7 +58,8 @@ export default function App() {
 				id="box"
 				className="relative aspect-square flex items-end p-16 w-[1080px] max-w-[1080px] overflow-hidden" // Added overflow-hidden
 			>
-				<div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent z-20"></div>
+				{/* <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent z-20"></div> */}
+				<div className="absolute inset-0 z-20" style={{ backgroundImage: 'url("/texture.png")' }}></div>
 				<img
 					loading="lazy"
 					ref={imageRef}

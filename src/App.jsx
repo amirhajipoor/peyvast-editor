@@ -9,21 +9,21 @@ export default function App() {
 	const [scale, setScale] = useState(1); // State for scaling
 	const [title, setTitle] = useState("دکتر علیرضا زاکانی");
 	const [link, setLink] = useState("");
-	const [body, setBody] = useState(
-		"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است "
-	);
+	const [body, setBody] = useState('لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه...')
 
 	function convert() {
 		const node = document.querySelector("#box");
 
 		domtoimage
 			.toPng(node)
-			.then(function (dataUrl) {
-				// window.location.href = dataUrl;
-				// const a = document.createElement("a");
-				// a.href = dataUrl;
-				// a.click();
-				setLink(dataUrl);
+			.then(function (url) {
+				const a = document.createElement('a')
+				a.href = url;
+				a.setAttribute('download', 'file.jpg')
+				document.body.appendChild(a)
+				a.click();
+				a.remove();
+
 			})
 			.catch(function (error) {
 				console.error("oops, something went wrong!", error);
@@ -56,9 +56,9 @@ export default function App() {
 		<div className="min-h-screen bg-gray-100">
 			<div
 				id="box"
-				className="relative aspect-square flex items-end p-16 w-[1080px] overflow-hidden" // Added overflow-hidden
+				className="relative aspect-square flex items-end p-16 w-[1080px] max-w-[1080px] overflow-hidden" // Added overflow-hidden
 			>
-				<div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent z-20"></div>
+				<div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent z-20"></div>
 				<img
 					loading="lazy"
 					ref={imageRef}
@@ -76,15 +76,15 @@ export default function App() {
 
 				<img
 					src="/logo.png"
-					className="w-40 z-30 right-12 -top-5 absolute"
+					className="w-40 z-30 right-16 top-0 absolute"
 					alt=""
 				/>
 
-				<div className="z-50">
-					<h1 className="text-bold text-[#82b5f9] text-3xl font-bold">
+				<div className="z-50 mb-14">
+					<h1 className="text-bold text-[#82b5f9] text-4xl font-bold">
 						{title}
 					</h1>
-					<p className="font-extrabold text-4xl leading-[4rem] text-body mt-2">
+					<p className="font-extrabold text-5xl leading-[4.6rem] text-body mt-2">
 						{body}
 					</p>
 				</div>

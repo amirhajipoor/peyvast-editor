@@ -84,7 +84,7 @@ export default function App() {
 					<h1 className="text-bold text-[#82b5f9] text-4xl font-bold">
 						{title}
 					</h1>
-					<p className="font-extrabold text-5xl leading-[4.6rem] text-body mt-2">
+					<p className="font-extrabold text-5xl leading-[4.6rem] text-body mt-4">
 						{body}
 					</p>
 				</div>

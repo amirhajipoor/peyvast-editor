@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: IRANYekanX;
+        font-style: normal;
+        font-weight: 300;
+        src: url('./assets/fonts/woff/IRANYekanX-Light.woff') format('woff'),   
+        url('./assets/fonts/woff2/IRANYekanX-Light.woff2') format('woff2');		 
+    }
+    
+    @font-face {
+        font-family: IRANYekanX;
+        font-style: normal;
+        font-weight: 900;
+        src: url('./assets/fonts/woff/IRANYekanX-Black.woff') format('woff'),   
+        url('./assets/fonts/woff2/IRANYekanX-Black.woff2') format('woff2');		 
+    }
+    @font-face {
+        font-family: IRANYekanX;
+        font-style: normal;
+        font-weight: 950;
+        src: url('./assets/fonts/woff/IRANYekanX-ExtraBlack.woff') format('woff'),   
+        url('./assets/fonts/woff2/IRANYekanX-ExtraBlack.woff2') format('woff2');		 
+    }
+    
+    @font-face {
+        font-family: IRANYekanX;
+        font-style: normal;
+        font-weight: bold;
+        src: url('./assets/fonts/woff/IRANYekanX-Bold.woff') format('woff'),   
+        url('./assets/fonts/woff2/IRANYekanX-Bold.woff2') format('woff2');	 
+    }
+    
+    @font-face {
+        font-family: IRANYekanX;
+        font-style: normal;
+        font-weight: normal;
+        src: url('./assets/fonts/woff/IRANYekanX-Regular.woff') format('woff'),   
+        url('./assets/fonts/woff2/IRANYekanX-Regular.woff2') format('woff2');	
+    }
+    
+    * {
+        font-family: 'Yekan Bakh' !important;
+    }
+
+    .farsi-digits {
+    font-feature-settings: "ss01";
+    }
+
+    a, button {
+        @apply ease-in-out hover:ease-in-out hover:duration-300 cursor-pointer;
+    }
+
+    .tnum {
+        font-feature-settings: "tnum", "ss01";
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 shadow-sm text-white;
+    }
+
+    .input {
+        @apply block w-96 px-5 py-2.5 mt-1 rounded-lg border border-gray-300;
+    }
+}

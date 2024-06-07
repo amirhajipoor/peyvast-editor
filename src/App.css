@@ -7,31 +7,31 @@
         font-family: IRANYekanX;
         font-style: normal;
         font-weight: 900;
-        src: url('./assets/fonts/woff/IRANYekanX-Black.woff') format('woff'),   
-        url('./assets/fonts/woff2/IRANYekanX-Black.woff2') format('woff2');		 
+        src: url('./fonts/woff/IRANYekanX-Black.woff') format('woff'),   
+        url('./fonts/woff2/IRANYekanX-Black.woff2') format('woff2');		 
     }
     @font-face {
         font-family: IRANYekanX;
         font-style: normal;
         font-weight: 950;
-        src: url('./assets/fonts/woff/IRANYekanX-ExtraBlack.woff') format('woff'),   
-        url('./assets/fonts/woff2/IRANYekanX-ExtraBlack.woff2') format('woff2');		 
+        src: url('./fonts/woff/IRANYekanX-ExtraBlack.woff') format('woff'),   
+        url('./fonts/woff2/IRANYekanX-ExtraBlack.woff2') format('woff2');		 
     }
     
     @font-face {
         font-family: IRANYekanX;
         font-style: normal;
         font-weight: bold;
-        src: url('./assets/fonts/woff/IRANYekanX-Bold.woff') format('woff'),   
-        url('./assets/fonts/woff2/IRANYekanX-Bold.woff2') format('woff2');	 
+        src: url('./fonts/woff/IRANYekanX-Bold.woff') format('woff'),   
+        url('./fonts/woff2/IRANYekanX-Bold.woff2') format('woff2');	 
     }
     
     @font-face {
         font-family: IRANYekanX;
         font-style: normal;
         font-weight: normal;
-        src: url('./assets/fonts/woff/IRANYekanX-Regular.woff') format('woff'),   
-        url('./assets/fonts/woff2/IRANYekanX-Regular.woff2') format('woff2');	
+        src: url('./fonts/woff/IRANYekanX-Regular.woff') format('woff'),   
+        url('./fonts/woff2/IRANYekanX-Regular.woff2') format('woff2');	
     }
     
     * {

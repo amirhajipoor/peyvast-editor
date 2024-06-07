@@ -18,7 +18,10 @@ export default function App() {
 		domtoimage
 			.toPng(node)
 			.then(function (dataUrl) {
-				window.location.href = dataUrl;
+				// window.location.href = dataUrl;
+				const a = document.createElement('a')
+				a.href = dataUrl;
+				a.click();
 			})
 			.catch(function (error) {
 				console.error("oops, something went wrong!", error);

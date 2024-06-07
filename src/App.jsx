@@ -110,8 +110,8 @@ export default function App() {
 							onChange={(e) => setTitle(e.target.value)}
 							className="input"
 							type="text"
+							value={title}
 						>
-							{title}
 						</textarea>
 					</div>
 					<div>
@@ -123,8 +123,8 @@ export default function App() {
 							rows={7}
 							className="input"
 							type="text"
+							value={body}
 						>
-							{body}
 						</textarea>
 					</div>
 				</div>

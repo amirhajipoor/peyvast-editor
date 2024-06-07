@@ -8,6 +8,7 @@ export default function App() {
 	const [y, setY] = useState(0);
 	const [scale, setScale] = useState(1); // State for scaling
 	const [title, setTitle] = useState("دکتر علیرضا زاکانی");
+	const [link, setLink] = useState("");
 	const [body, setBody] = useState(
 		"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است "
 	);
@@ -19,9 +20,10 @@ export default function App() {
 			.toPng(node)
 			.then(function (dataUrl) {
 				// window.location.href = dataUrl;
-				const a = document.createElement('a')
-				a.href = dataUrl;
-				a.click();
+				// const a = document.createElement("a");
+				// a.href = dataUrl;
+				// a.click();
+				setLink(dataUrl);
 			})
 			.catch(function (error) {
 				console.error("oops, something went wrong!", error);
@@ -111,8 +113,7 @@ export default function App() {
 							className="input"
 							type="text"
 							value={title}
-						>
-						</textarea>
+						></textarea>
 					</div>
 					<div>
 						<label htmlFor="" className="block">
@@ -124,8 +125,7 @@ export default function App() {
 							className="input"
 							type="text"
 							value={body}
-						>
-						</textarea>
+						></textarea>
 					</div>
 				</div>
 				<div className="flex gap-x-2">
@@ -157,6 +157,12 @@ export default function App() {
 						دریافت عکس
 					</button>
 				</div>
+
+				{link && (
+					<div>
+						<a className="underline text-lg text-sky-600" href={link}>لینک دانلود عکس</a>
+					</div>
+				)}
 			</div>
 		</div>
 	);
